@@ -7,11 +7,9 @@ FROM alpine:3.10.3
 LABEL maintainer="imbrechts.kevin+jdk@protonmail.com"
 
 ENV LASTREFRESH="20191115" \
-    PATH=$PATH:$JRE_HOME/bin \
     JAVA_VERSION="8.0.222" \
     JAVA_HASH="9e05228f783e32cf248d3d870243dc8f" \
     ZULU_VERSION="8.40.0.25-ca" \
-    CAS_VERSION="5.3" \
     JAVA_HOME="/opt/java-home" \
     PATH=$PATH:$JAVA_HOME/bin:.
 
