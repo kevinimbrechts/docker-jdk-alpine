@@ -33,4 +33,4 @@ RUN apk del tar wget && \
 
 WORKDIR /
 
-CMD ["/bin/sh"]
+CMD ["/bin/ash"]
