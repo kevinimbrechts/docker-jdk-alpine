@@ -6,10 +6,10 @@ FROM alpine:3.10.3
 
 LABEL maintainer="imbrechts.kevin+jdk@protonmail.com"
 
-ENV LASTREFRESH="20191115" \
-    JAVA_VERSION="8.0.222" \
-    JAVA_HASH="9e05228f783e32cf248d3d870243dc8f" \
-    ZULU_VERSION="8.40.0.25-ca" \
+ENV LASTREFRESH="20191119" \
+    JAVA_VERSION="11.0.5" \
+    JAVA_HASH="0029ce609a5922ff62e74f2d920491ad" \
+    ZULU_VERSION="11.35.15-ca" \
     JAVA_HOME="/opt/java-home" \
     PATH=$PATH:$JAVA_HOME/bin:.
 
@@ -33,4 +33,4 @@ RUN apk del tar wget && \
 
 WORKDIR /
 
-CMD ["/bin/ash"]
+CMD ["/bin/sh"]
