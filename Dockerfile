@@ -13,7 +13,7 @@ ENV LASTREFRESH="20191115" \
     JAVA_HOME="/opt/java-home" \
     PATH=$PATH:$JAVA_HOME/bin:.
 
-# Git, tar, wget install
+# tar, wget install
 RUN apk update && \
     apk add --no-cache --virtual utils \
             tar=1.32-r0 \
