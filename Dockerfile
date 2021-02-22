@@ -1,12 +1,12 @@
 #################################
-###       ALPINE 3.12.0       ###
+###       ALPINE 3.13.2       ###
 #################################
 
-FROM alpine:3.12.0
+FROM alpine:3.13.2
 
 LABEL maintainer="imbrechts.kevin+jdk@protonmail.com"
 
-ENV LASTREFRESH="20201014" \
+ENV LASTREFRESH="20210222" \
     JAVA_VERSION="14.0.2" \
     JAVA_HASH="3e760b8d66112cd5141c7639c35d65a0" \
     ZULU_VERSION="14.29.23-ca" \
@@ -16,8 +16,8 @@ ENV LASTREFRESH="20201014" \
 # tar, wget install
 RUN apk update && \
     apk add --no-cache --virtual utils \
-            tar=1.32-r1 \
-            wget=1.20.3-r1
+            tar=1.33-r1 \
+            wget=1.21.1-r1
 
 # Download Azul Java, verify the hash, install
 WORKDIR /tmp
