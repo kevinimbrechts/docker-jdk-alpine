@@ -1,23 +1,23 @@
 #################################
-###       ALPINE 3.16.0       ###
+###       ALPINE 3.18.0       ###
 #################################
 
-FROM alpine:3.16.0
+FROM alpine:3.18.0
 
 LABEL maintainer="imbrechts.kevin+jdk@protonmail.com"
 
-ENV LASTREFRESH="20220525" \
-    JAVA_VERSION="14.0.2" \
-    JAVA_HASH="3e760b8d66112cd5141c7639c35d65a0" \
-    ZULU_VERSION="14.29.23-ca" \
+ENV LASTREFRESH="20231030" \
+    JAVA_VERSION="17.0.9" \
+    JAVA_HASH="8d9910b7433e4643cfcc462b6ce5059d" \
+    ZULU_VERSION="17.46.19-ca" \
     JAVA_HOME="/opt/java-home" \
     PATH=$PATH:$JAVA_HOME/bin:.
 
 # tar, wget install
 RUN apk update && \
     apk add --no-cache --virtual utils \
-            tar=1.34-r0 \
-            wget=1.21.3-r0
+            tar=1.34-r3 \
+            wget=1.21.4-r0
 
 # Download Azul Java, verify the hash, install
 WORKDIR /tmp
